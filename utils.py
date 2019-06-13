@@ -16,7 +16,7 @@ def load_image(filename,size=None, scale=None):
         img = img.resize((int(img.size[0] / scale),int(img.size[1]/scale)),Image.BICUBIC)
     return img
 
-def save_image(fliename, data):
+def save_image(filename, data):
     # data == torch
     # clone == 복사
     # Clamp all elements in input into the range [min, max] and return a resulting Tensor.
