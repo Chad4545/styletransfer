@@ -23,6 +23,7 @@ def save_image(fliename, data):
     img = data.clone().clamp(0,255).numpy()
     # tensor: (C, W, H) - > np: (W,H,C)
     img = img.transpose(1,2,0).astype("uint8")
+    img = Image.fromarray(img)
     img.save(filename)
     
 def gram_matrix(y):
